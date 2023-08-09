@@ -4,6 +4,8 @@ import "fmt"
 
 func main() {
 	fmt.Println(semana(3))
+	fmt.Println(e_bissexto(2000))
+
 }
 
 
@@ -28,10 +30,21 @@ func semana(num int) string{
 	}
 }
 
-func e_bissextp(ano int) bool {
-	bissexto := false
-	for i := 4; i %  {
-
+func e_bissexto(num int) string{
+	if num % 4 == 0{
+		if num % 100 == 0{
+			if num % 400 == 0 {
+				return "É bissexto"
+			} else {
+				return "Não é bissexto"
+			}
+		} else{
+			return "É bissexto"
+		} 
+	} else {
+		return "Não é bissexto"
 	}
-	return bissexto
+
 }
+
+
