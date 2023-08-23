@@ -33,16 +33,19 @@ func main() {
 		case "2":
 			ope.ExcluiContato(&listaContatos)
 		case "3":
-			ope.RetornaLista()
+
+			ope.RetornaLista(&listaContatos)
+
 		case "4":
-			ope.RetornaLista()
+			ope.RetornaLista(&listaContatos)
 			fmt.Print("Informe o indice: ")
 			fmt.Scanln(&i)
 
 			fmt.Print("Informe o novo email: ")
 			novoEmail, _ = leitor.ReadString('\n')
 
-			ope.EditaEmail(i, novoEmail, listaContatos)
+			ope.EditaEmail(i, novoEmail, &listaContatos)
+			
 		default:
 			return
 		}
